@@ -101,8 +101,8 @@
                                         <span><field name="weight_uom_name"/></span>
                                     </div>
                                     <label for="volume" invisible="1" attrs="{'invisible':[('product_variant_count', '>', 1), ('is_product_variant', '=', False)]}"/>
-                                    <div class="o_row" name="volume" invisible="1" attrs="{'invisible':[('product_variant_count', '>', 1), ('is_product_variant', '=', False)]}">
-                                        <field name="volume" string="Volume"/>
+                                    <div class="o_row" invisible="1" name="volume" attrs="{'invisible':[('product_variant_count', '>', 1), ('is_product_variant', '=', False)]}">
+                                        <field name="volume" invisible="1" string="Volume"/>
                                         <span><field name="volume_uom_name"/></span>
                                     </div>
                                 </group>
@@ -248,7 +248,7 @@
                         </group>
                         <group>
                             <group name="weight" string="Logistics" attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}">
-                                <label for="volume"/>
+                                <label for="volume" invisible="1"/>
                                 <div class="o_row">
                                     <field name="volume"/>
                                     <span><field name="volume_uom_name"/></span>
